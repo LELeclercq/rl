@@ -42,6 +42,16 @@ int main()
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
             window.close();
         }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return)) {
+
+            window.clear();
+
+            //testMap.GenerateRooms();
+
+            //testMap.DrawMap(window);
+
+            //window.display();
+        }
     }
 
     return 0;
