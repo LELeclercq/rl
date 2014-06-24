@@ -42,15 +42,20 @@ int main()
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
             window.close();
         }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return)) {
+        if (event.type == sf::Event::KeyReleased)
+        {
+            if (event.key.code == sf::Keyboard::Return)
+            {
+                window.clear();
 
-            window.clear();
+                Map testMap(charsWide, charsTall);
+                testMap.GenerateRooms();
 
-            //testMap.GenerateRooms();
+                testMap.DrawMap(window);
 
-            //testMap.DrawMap(window);
+                window.display();
+            }
 
-            //window.display();
         }
     }
 
